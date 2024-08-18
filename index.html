@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>StopWatch</title>
+  </head>
+  <body>
+    <div class="container">
+      <span class="container__title"> Coutdown Timer </span>
+      <div class="container__lables">
+        <p class="container__lables--lable">Hours</p>
+        <p class="container__lables--lable">minutes</p>
+        <p class="container__lables--lable">seconds</p>
+      </div>
+      <div class="container__inputs">
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time hour"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time minutes"
+        />
+        <p class="container__inputs--colon">:</p>
+        <input
+          type="number"
+          maxlength="2"
+          oninput="this.value=this.value.slice(0,this.maxLength)"
+          placeholder="00"
+          class="container__inputs--time seconds"
+        />
+      </div>
+      <div class="container__btns">
+        <button class="btn start">Start</button>
+        <button class="btn stop">Stop</button>
+        <button class="btn reset">Reset</button>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
